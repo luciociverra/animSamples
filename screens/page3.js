@@ -1,65 +1,52 @@
 import React, { useRef, useEffect} from "react";
-import { Animated, Text, View, StyleSheet, Button, SafeAreaView, Value, Pressable } from 'react-native';
-
-const Page3= () => {
-    const leftValue= useRef(new Animated.Value(0)).current;
-    const heightValue= useRef(new Animated.Value(100)).current;
-    const commonTime = 3000;
+import { Text, View, StyleSheet, Button, SafeAreaView, Value, Pressable, Animated, Dimensions } from 'react-native';
 
 
-    useEffect(() => {
-        moveSquare()
-    }, [])
+function Page3() {   
 
-    const moveSquare= () =>{
+  const translation = useRef(new Animated.Value(10)).current; // 0 px di distanza sx in partenza
 
-        Animated.parallel([
-            Animated.timing(leftValue, {
-                toValue: 300, duration: commonTime, useNativeDriver: false
-            }),
-            Animated.timing(heightValue, {
-                toValue: 200, duration: commonTime,useNativeDriver: false
-            })
-        ]).start(() => {  //callback
-           backSquare()
-        });
-    };
+  useEffect(() => {
+    Animated.timing(translation, {
+      toValue: 150,  //spostamento pixel da bordo sx 
+      duration: 3000,  //durata spostamento
+      useNativeDriver: true,
+    }).start();
+  }, []);
 
-    const backSquare= () =>{
-        Animated.parallel([
-            Animated.timing(leftValue, {
-                toValue: 0, duration: commonTime, useNativeDriver: false
-            }),
-            Animated.timing(heightValue, {
-                toValue: 100, duration: commonTime,useNativeDriver: false
-            })
-        ]).start(() => {
-           moveSquare()
-        });
-    }
-
+   
     return (
-        <View>
-            <Animated.View style={{ width: 100,
-                 height: heightValue,
-                 backgroundColor: 'red',
-                 left: leftValue}} />
 
-            <Pressable 
-        onPress={moveSquare}>
-            <Text>
-                Away
-            </Text>
-        </Pressable>
+      <View style={styles.container}>
+      <Animated.View 
+      style={{
+        width: 100,
+        height: 100,
+        borderRadius: 50, 
+        backgroundColor: '#ff33cc',
 
-        <Pressable 
-        onPress={backSquare}>
-            <Text>
-                Back
-            </Text>
-        </Pressable>
-        </View>
+        transform:[
+          {translateX: translation},
+          {translateY: 200},
+        ],
+        opacity: translation.interpolate( { 
+          inputRange: [0, 100], 
+          outputRange: [0, 1],  // This means that opacity will equal 0.5 when the translation is 50, and 1 when it is 100.
+          //extrapolateLeft: 'clamp', //"cosa dovrebbe accadere al di fuori degli intervalli e quale tipo di schema dovrebbero seguire i valori esterni".
+          //extrapolateRight: 'clamp', 
+        } ),
+      }}
+      />
+      </View>
     )
 }
+
+
+const styles = StyleSheet.create({
+  container:{
+    width: '100%',
+    height: '100%',
+    backgroundColor: 'black'
+  }});
 
 export default Page3;

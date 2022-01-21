@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "animSamples",
-    "slug": "animSamples",
+    "name": "Lcom animSamples",
+    "slug": "expo.dev/@civerra.v/native-component-list",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -17,13 +17,16 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": false,
+      "buildNumber": "1.0.0",
+      "bundleIdentifier": "com.civerra.v.animSamples"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.civerra.v.animSamples"
     },
     "web": {
       "favicon": "./assets/favicon.png"

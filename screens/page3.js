@@ -1,5 +1,6 @@
 import React, { useRef, useEffect} from "react";
-import { Text, View, StyleSheet, Button, SafeAreaView, Value, Pressable, Animated, Dimensions } from 'react-native';
+import { Text, View, StyleSheet, Button, SafeAreaView, Value, Pressable, Animated, 
+Dimensions } from 'react-native';
 
 
 function Page3() {   

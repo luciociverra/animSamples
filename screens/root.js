@@ -6,6 +6,9 @@ import Page3 from "./page3";
 import Page2 from "./page2";
 import Page4 from "./page4";
 import Page5 from "./page5";
+import Page6 from "./page6";
+import Page7 from "./page7";
+import Page8 from "./page8";
 const Stack = createStackNavigator();
 
 const Root = () => {
@@ -22,6 +25,9 @@ const Root = () => {
         <Stack.Screen name="Page3" component={Page3} />
         <Stack.Screen name="Page4" component={Page4} />
         <Stack.Screen name="Page5" component={Page5} />
+        <Stack.Screen name="Page6" component={Page6} />
+        <Stack.Screen name="Page7" component={Page7} />
+        <Stack.Screen name="Page8" component={Page8} />
       </Stack.Group>
     </Stack.Navigator>
   );

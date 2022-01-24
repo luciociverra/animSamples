@@ -35,28 +35,50 @@ const MenuPrincipale = ({navigation}) => {
         <Pressable style={{borderWidth: 2, padding: 10, width: 300, alignItems: 'center'}}
         onPress={()=> navigation.navigate("Page2")}>
         <Text>
-           1. Timing
+           p2. Timing
         </Text>
         </Pressable>
 
         <Pressable style={{borderWidth: 2, padding: 10, width: 300, alignItems: 'center', marginTop:'10%'}}
         onPress={()=> navigation.navigate("Page3")}>
         <Text>
-           2. Animated.timing opacity
+           p3. Animated.timing opacity
         </Text>
         </Pressable>
 
         <Pressable style={{borderWidth: 2, padding: 10, width: 300, alignItems: 'center', marginTop:'10%'}}
         onPress={()=> navigation.navigate("Page4")}>
         <Text>
-           3. Animated.timing rotation
+           p4. Animated.timing rotation
         </Text>
         </Pressable>
 
         <Pressable style={{borderWidth: 2, padding: 10, width: 300, alignItems: 'center', marginTop:'10%'}}
         onPress={()=> navigation.navigate("Page5")}>
         <Text>
-           4. Spring
+           p5. Spring
+        </Text>
+        </Pressable>
+
+        <Pressable style={{borderWidth: 2, padding: 10, width: 300, alignItems: 'center', marginTop:'10%'}}
+        onPress={()=> navigation.navigate("Page6")}>
+        <Text>
+           p6. Toast
+        </Text>
+        </Pressable>
+
+
+        <Pressable style={{borderWidth: 2, padding: 10, width: 300, alignItems: 'center', marginTop:'10%'}}
+        onPress={()=> navigation.navigate("Page7")}>
+        <Text>
+           p7. Pan GestureHandler
+        </Text>
+        </Pressable>
+
+        <Pressable style={{borderWidth: 2, padding: 10, width: 300, alignItems: 'center', marginTop:'10%'}}
+        onPress={()=> navigation.navigate("Page8")}>
+        <Text>
+           p8. Double Tap Gesture Handler
         </Text>
         </Pressable>
 

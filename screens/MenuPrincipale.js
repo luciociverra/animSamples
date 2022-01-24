@@ -1,6 +1,7 @@
 
 import React, {useEffect, useRef}  from "react";
 import { Animated, Pressable, StyleSheet, Text, View,Button, Dimensions } from "react-native";
+import { ScrollView, Swipeable } from "react-native-gesture-handler";
 
 
 const MenuPrincipale = ({navigation}) => {
@@ -29,6 +30,7 @@ const MenuPrincipale = ({navigation}) => {
   return (
     <View style={{marginTop: 100, alignItems: 'center'}}>
 
+    <ScrollView>
       <Animated.View style={position.getLayout()}>
 
 
@@ -82,8 +84,23 @@ const MenuPrincipale = ({navigation}) => {
         </Text>
         </Pressable>
 
-        </Animated.View>
+        <Pressable style={{borderWidth: 2, padding: 10, width: 300, alignItems: 'center', marginTop:'10%'}}
+        onPress={()=> navigation.navigate("FlatList")}>
+        <Text>
+           p9. FlatList
+        </Text>
+        </Pressable>
 
+        <Pressable style={{borderWidth: 2, padding: 10, width: 300, alignItems: 'center', marginTop:'10%'}}
+        onPress={()=> navigation.navigate("Page10")}>
+        <Text>
+           p9. Swipe Gesture
+        </Text>
+        </Pressable>
+
+
+        </Animated.View>
+        </ScrollView>
     </View>
   );
 };

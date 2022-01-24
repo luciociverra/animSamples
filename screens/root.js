@@ -9,6 +9,8 @@ import Page5 from "./page5";
 import Page6 from "./page6";
 import Page7 from "./page7";
 import Page8 from "./page8";
+import FlatListPage from "./FlatList";
+import Page10 from "./page10";
 const Stack = createStackNavigator();
 
 const Root = () => {
@@ -28,6 +30,8 @@ const Root = () => {
         <Stack.Screen name="Page6" component={Page6} />
         <Stack.Screen name="Page7" component={Page7} />
         <Stack.Screen name="Page8" component={Page8} />
+        <Stack.Screen name="FlatList" component={FlatListPage} />
+        <Stack.Screen name="Page10" component={Page10} />
       </Stack.Group>
     </Stack.Navigator>
   );

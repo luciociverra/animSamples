@@ -1,0 +1,12 @@
+Spiegazione chiara Animated event
+
+https://animationbook.codedaily.io/animated-event/
+
+
+INTERPOLATE
+https://animationbook.codedaily.io/interpolation
+this._opacityAnimation = this._animatedValue.x.interpolate({
+    inputRange: [0, 150],
+    outputRange: [1, .2],
+    extrapolate: 'clamp' // se x supera 150 l'output rimarra' sempre 0.2
+});

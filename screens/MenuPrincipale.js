@@ -2,7 +2,7 @@
 import React, {useEffect, useRef}  from "react";
 import { Animated, Pressable, StyleSheet, Text, View,Button, Dimensions } from "react-native";
 import { ScrollView, Swipeable } from "react-native-gesture-handler";
-
+const { height } = Dimensions.get('window');
 
 const MenuPrincipale = ({navigation}) => {
   const windowWidth = Dimensions.get('window').width;
@@ -28,87 +28,68 @@ const MenuPrincipale = ({navigation}) => {
 
 
   return (
-    <View style={{marginTop: 100, alignItems: 'center'}}>
+    <View style={{marginTop: 20, alignItems: 'center'}}>
 
-    <ScrollView>
+    <ScrollView style={{height: height}}>
       <Animated.View style={position.getLayout()}>
 
 
-        <Pressable style={{borderWidth: 2, padding: 10, width: 300, alignItems: 'center'}}
-        onPress={()=> navigation.navigate("Page2")}>
-        <Text>
-           p2. Timing
-        </Text>
+        <Pressable style={styles.menuButton} onPress={()=> navigation.navigate("Page2")}>
+        <Text>p2. Timing</Text>
         </Pressable>
 
-        <Pressable style={{borderWidth: 2, padding: 10, width: 300, alignItems: 'center', marginTop:'10%'}}
-        onPress={()=> navigation.navigate("Page3")}>
-        <Text>
-           p3. Animated.timing opacity
-        </Text>
+        <Pressable style={styles.menuButton} onPress={()=> navigation.navigate("Page3")}>
+        <Text>p3. Animated.timing opacity</Text>
         </Pressable>
 
-        <Pressable style={{borderWidth: 2, padding: 10, width: 300, alignItems: 'center', marginTop:'10%'}}
-        onPress={()=> navigation.navigate("Page4")}>
-        <Text>
-           p4. Animated.timing rotation
-        </Text>
+        <Pressable style={styles.menuButton} onPress={()=> navigation.navigate("Page4")}>
+        <Text>p4. Animated.timing rotation</Text>
         </Pressable>
 
-        <Pressable style={{borderWidth: 2, padding: 10, width: 300, alignItems: 'center', marginTop:'10%'}}
-        onPress={()=> navigation.navigate("Page5")}>
-        <Text>
-           p5. Spring
-        </Text>
+        <Pressable style={styles.menuButton} onPress={()=> navigation.navigate("Page5")}>
+        <Text>p5. Spring</Text>
         </Pressable>
 
-        <Pressable style={{borderWidth: 2, padding: 10, width: 300, alignItems: 'center', marginTop:'10%'}}
-        onPress={()=> navigation.navigate("Page6")}>
-        <Text>
-           p6. Toast
-        </Text>
+        <Pressable style={styles.menuButton} onPress={()=> navigation.navigate("Page6")}>
+        <Text>p6. Toast</Text>
         </Pressable>
 
-
-        <Pressable style={{borderWidth: 2, padding: 10, width: 300, alignItems: 'center', marginTop:'10%'}}
-        onPress={()=> navigation.navigate("Page7")}>
-        <Text>
-           p7. Pan GestureHandler
-        </Text>
+        <Pressable style={styles.menuButton} onPress={()=> navigation.navigate("Page7")}>
+        <Text>p7. Pan GestureHandler</Text>
         </Pressable>
 
-        <Pressable style={{borderWidth: 2, padding: 10, width: 300, alignItems: 'center', marginTop:'10%'}}
-        onPress={()=> navigation.navigate("Page8")}>
-        <Text>
-           p8. Double Tap Gesture Handler
-        </Text>
+        <Pressable style={styles.menuButton} onPress={()=> navigation.navigate("Page8")}>
+        <Text>p8. Double Tap Gesture Handler</Text>
         </Pressable>
 
-        <Pressable style={{borderWidth: 2, padding: 10, width: 300, alignItems: 'center', marginTop:'10%'}}
-        onPress={()=> navigation.navigate("FlatList")}>
-        <Text>
-           p9. FlatList
-        </Text>
+        <Pressable style={styles.menuButton}  onPress={()=> navigation.navigate("FlatList")}>
+        <Text>p9. FlatList</Text>
         </Pressable>
 
-        <Pressable style={{borderWidth: 2, padding: 10, width: 300, alignItems: 'center', marginTop:'10%'}}
-        onPress={()=> navigation.navigate("Page10")}>
-        <Text>
-           p9. Swipe Gesture
-        </Text>
+        <Pressable style={styles.menuButton}nPress={()=> navigation.navigate("Page10")}>
+        <Text> p10. Swipe Gesture</Text>
         </Pressable>
 
+        <Pressable style={styles.menuButton} onPress={()=> navigation.navigate("Page11")}>
+        <Text>p11. Circular show</Text>
+        </Pressable>
 
+        <Pressable style={styles.menuButton} onPress={()=> navigation.navigate("Page12")}>
+        <Text>p12. ???</Text>
+        </Pressable>
+
+        
         </Animated.View>
         </ScrollView>
     </View>
   );
 };
-
+const styles = StyleSheet.create({
+   menuButton:{
+      borderWidth: 2, padding: 15, width: 300, alignItems: 'center', marginTop:10
+    }});
 export default MenuPrincipale;
 
-const styles = StyleSheet.create({
 
-});
 
  

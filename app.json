@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "Lcom animSamples",
-    "slug": "expo.dev/@civerra.v/native-component-list",
+    "slug": "civerra.v.animSamples",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",

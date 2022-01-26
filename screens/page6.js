@@ -10,7 +10,7 @@ export default function Page6() {
  
 
 
-  const height = 444;
+  const height = 300;
   const show = useSharedValue(height);
 
   const styles = {
@@ -25,8 +25,8 @@ export default function Page6() {
       alignItems: 'center',
       justifyContent: 'center',
       backgroundColor: 'pink',
-      borderBottomLeftRadius: 10,
-      borderBottomRightRadius: 10,
+      borderBottomLeftRadius: 30,
+      borderBottomRightRadius: 30,
       transform: [
         { translateY: show.value },
       ],
@@ -40,19 +40,16 @@ export default function Page6() {
 
   const vai=()=>{
 
-    show.value = withTiming(show.value-130);
+    show.value = withTiming(show.value-40);
     setTimeout(() => {
         vai();
-      }, 1000);  
+      }, 100);  
   }
 
   // show/hide when message set
   useEffect(() => {
    {
       show.value = withTiming(0);
-
-    
-
       //show.value = withDelay(2000, withTiming(-330));
     vai();    }
   }, []);

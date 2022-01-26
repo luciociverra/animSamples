@@ -93,7 +93,7 @@ const FlatListPage =() => {
          shadowOffset:{ width:0, height:10 },
          shadowOpacity:.2, // abbassa l'ombra
          shadowRadius:20,
-         //opacity,             // GESTISTA DA ANIMATION
+         opacity,             // GESTISTA DA ANIMATION
          transform:[{scale}]  // GESTITA DA ANIMATION
         }}>
           <Image source={{uri:item.image}}

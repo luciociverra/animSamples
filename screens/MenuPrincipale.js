@@ -8,10 +8,11 @@ const MenuPrincipale = ({navigation}) => {
   const windowWidth = Dimensions.get('window').width;
   const initPosition = {
     x: 0,
-    y: -200,
+    y: 20, //-200 per rimbalzo
   };
 
   useEffect(() => {
+    /* rimbalO MENU
     Animated.spring(position, {
       toValue: {x: initPosition.x, y: 50}, //spostamento di 250px in verticale rispetto alla initPosition
       //tension: 40, //controlla la velocità, 40 è predefinito
@@ -20,12 +21,10 @@ const MenuPrincipale = ({navigation}) => {
       useNativeDriver: false,
     }).start(() => {
       //position.setValue(initPosition);
-    });
+    });*/
   }, []);
 
   const position = useRef(new Animated.ValueXY(initPosition)).current;
-
-
 
   return (
     <View style={{marginTop: 20, alignItems: 'center'}}>
@@ -77,7 +76,10 @@ const MenuPrincipale = ({navigation}) => {
         <Pressable style={styles.menuButton} onPress={()=> navigation.navigate("Page12")}>
         <Text>p12. ???</Text>
         </Pressable>
-
+        <Pressable style={styles.menuButton} onPress={()=> navigation.navigate("Drawer")}>
+        <Text>Drawer</Text>
+        </Pressable>
+        
         
         </Animated.View>
         </ScrollView>
